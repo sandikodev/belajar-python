@@ -11,12 +11,12 @@ def menu():
         print('1. yes untuk meminjam buku')
         print('2. no untuk keluar')
         x = str(input('> '))
-        if x == 'yes' or x == 'y':
+        if (x == 'yes' or x == 'y' or x == '1'):
             simpanNama()
             simpanNim()
             simpanBuku()
             rincian()
-        elif x == 'no' or x == 'n':
+        elif (x == 'no' or x == 'n' or x == '1'):
             break
         else:
             print('Perintah tidak dikenal')
@@ -50,12 +50,12 @@ def simpanBuku():
 def rincian():
     print('\n======================================')
     print('Rincian Peminjaman Buku Anda :')
-    print(f'Nama\t\t: {user["nama"]}')
-    print(f'Nim\t\t: {user["nim"]}')
-    print('Buku\t\t:')
+    print(f'Nama\t: {user["nama"]}')
+    print(f'Nim\t: {user["nim"]}')
+    print('Buku\t:')
     for index, buku in enumerate(user["buku"], start=1):
-        print(f'\t\t{index}. {buku}')
-    print('Selesaii\n')
+        print(f'\t{index}. {buku}')
+    print('\nSelesaii\n')
 
 
 menu()
